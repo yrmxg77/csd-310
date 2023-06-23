@@ -1,0 +1,26 @@
+db = client["pytech"]
+collection = db["students"]
+
+
+student1 = {
+    "student_id": "1007",
+    "first_name": "M",
+    "last_name": "Lopez"
+}
+
+student2 = {
+    "student_id": "1008",
+    "first_name": "Michael",
+    "last_name": "Luis"
+}
+
+student3 = {
+    "student_id": "1009",
+    "first_name": "Michael",
+    "last_name": "Lopez"
+}
+
+
+student1_id = collection.insert_one(student1).inserted_id
+student2_id = collection.insert_one(student2).inserted_id
+student3_id = collection.insert_one(student3).inserted_id
